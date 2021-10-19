@@ -1,0 +1,32 @@
+import React, { Component } from 'react';
+
+class Garage extends Component {
+  render() {
+    console.log(this.props)
+    const { cars } = this.props
+    //const cars = this.props.cars
+    
+    const cars_list = cars.map(_car => {
+        return (
+            
+            <li key={_car.id}>
+                <p>Brand: {_car.brand}</p>
+                <p>Model: {_car.model}</p>
+                <p>Color: {_car.color}</p>
+                <p>Year: {_car.year}</p>
+                <button onClick={() => this.props.deleteCar(_car.id)}>Delete car</button>
+            </li>
+        ) 
+    });
+
+    return (
+        <div className="cars">
+            <ul >
+                { cars_list }
+            </ul>
+        </div>
+        );
+  }
+}
+
+export default Garage;

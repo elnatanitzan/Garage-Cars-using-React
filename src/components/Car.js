@@ -1,20 +1,21 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-export class Car extends Component {
-    render() {
+class Car extends Component {
+  render() {
+    // <Car brand="Toyota" model="Kamry" color="White"></Car>
+    console.log(this.props)
+    const { brand, model, color } = this.props
+    //const brand = this.props.brand x3
+  return (
+    <div >
+      <p>Brand: {brand}</p>
+      <p>Model: {model}</p>
+      <p>Color: {color}</p>
+      {/* <p>Year: {year}</p> */}
 
-        // "this.props" refers to the data of props we sent within the Car Tag in App.js
-        const { brand, model, color } = this.props ;
-
-        return (
-            <div>
-                {/* Here we place the values of the props we sent inside the Car tag in App.js */}
-                <p>Brand: {brand}</p>
-                <p>Model: {model}</p>
-                <p>Color: {color}</p>
-            </div>
-        )
-    }
+    </div>
+    );
+  }
 }
 
 export default Car;
