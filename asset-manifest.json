@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Garage-Cars-using-React/static/css/main.d80a3cad.chunk.css",
+    "main.js": "/Garage-Cars-using-React/static/js/main.e2f475ce.chunk.js",
+    "main.js.map": "/Garage-Cars-using-React/static/js/main.e2f475ce.chunk.js.map",
+    "runtime-main.js": "/Garage-Cars-using-React/static/js/runtime-main.418a8d41.js",
+    "runtime-main.js.map": "/Garage-Cars-using-React/static/js/runtime-main.418a8d41.js.map",
+    "static/js/2.642e3505.chunk.js": "/Garage-Cars-using-React/static/js/2.642e3505.chunk.js",
+    "static/js/2.642e3505.chunk.js.map": "/Garage-Cars-using-React/static/js/2.642e3505.chunk.js.map",
+    "index.html": "/Garage-Cars-using-React/index.html",
+    "static/css/main.d80a3cad.chunk.css.map": "/Garage-Cars-using-React/static/css/main.d80a3cad.chunk.css.map",
+    "static/js/2.642e3505.chunk.js.LICENSE.txt": "/Garage-Cars-using-React/static/js/2.642e3505.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.418a8d41.js",
+    "static/js/2.642e3505.chunk.js",
+    "static/css/main.d80a3cad.chunk.css",
+    "static/js/main.e2f475ce.chunk.js"
+  ]
+}
