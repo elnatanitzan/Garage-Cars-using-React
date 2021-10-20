@@ -33,17 +33,33 @@ class AddCar extends Component {
     }
     render() {   
         return (
-            <div>
-                <form className="add-car" onSubmit={this.handleSubmit}>
-                    <label htmlFor="brand">Brand:</label>
-                    <input type="text" id="brand" onChange={this.handleChange} required />
-                    <label htmlFor="Model">Model:</label>
-                    <input type="text" id="model" onChange={this.handleChange} />
-                    <label htmlFor="Color">Color:</label>
-                    <input type="text" id="color" onChange={this.handleChange} />
-                    <label htmlFor="Year">Year:</label>
-                    <input type="number" id="year" onChange={this.handleChange} />
-                    <button>Submit</button>
+            <div className="add-car">
+                <h3>Add new Car:</h3>
+                <form  onSubmit={this.handleSubmit}>
+                    <div className="form-container">
+                        <div>
+                            <label htmlFor="brand">Brand:</label>
+                            <input type="text" id="brand" onChange={this.handleChange} required />
+                        </div>
+
+                        <div>
+                            <label htmlFor="Model">Model:</label>
+                            <input type="text" id="model" onChange={this.handleChange} />
+                        </div>
+
+                        <div>
+                            <label htmlFor="Color">Color:</label>
+                            <input type="text" id="color" onChange={this.handleChange} />
+                        </div>
+
+                        <div>
+                            <label htmlFor="Year">Year:</label>
+                            <input type="number" id="year" onChange={this.handleChange} />
+                        </div>
+                    </div>
+                    <div className="button-container">
+                        <button>Submit</button>
+                    </div>
                 </form>
             </div>
             );

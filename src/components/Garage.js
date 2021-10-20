@@ -10,11 +10,17 @@ class Garage extends Component {
         return (
             
             <li key={_car.id}>
-                <p>Brand: {_car.brand}</p>
-                <p>Model: {_car.model}</p>
-                <p>Color: {_car.color}</p>
-                <p>Year: {_car.year}</p>
-                <button onClick={() => this.props.deleteCar(_car.id)}>Delete car</button>
+                <header>
+                    <h3>Brand: {_car.brand}</h3>
+                </header>
+                <main>
+                    <p>Model: {_car.model}</p>
+                    <p>Color: {_car.color}</p>
+                    <p>Year: {_car.year}</p>
+                </main>
+                <footer>
+                    <button onClick={() => this.props.deleteCar(_car.id)}>Delete car</button>
+                </footer>
             </li>
         ) 
     });
