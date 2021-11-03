@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import Car from './components/Car'
 import Garage from './components/Garage'
 import AddCar from './components/AddCar.js';
 import './App.scss'

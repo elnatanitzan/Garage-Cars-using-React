@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #202020;
+  color: whitesmoke;
+  font-family: "Nunito", sans-serif;
+}
+
+.app-header {
+  height: 80px;
+  background: #2e2e2e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid black;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem 0 2rem 0;
+}
+
+.app-header h1 {
+  text-align: center;
+  margin: 0;
+  padding: auto;
+}
+
+.main {
+  background: #202020;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 230px 1fr;
+      grid-template-columns: 230px 1fr;
+}
+
+@media screen and (max-width: 680px) {
+  .main {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.main button {
+  -webkit-box-shadow: 0 0 8px -2px whitesmoke;
+          box-shadow: 0 0 8px -2px whitesmoke;
+  -webkit-transition: scale .3s;
+  transition: scale .3s;
+}
+
+.main button:hover {
+  -webkit-box-shadow: 0 0 9px -2px whitesmoke;
+          box-shadow: 0 0 9px -2px whitesmoke;
+}
+
+.main button:active {
+  -webkit-transform: scale(97%);
+          transform: scale(97%);
+}
+
+.main .cars {
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 1.2rem;
+}
+
+.main .cars ul {
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+.main .cars ul li {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #777777;
+  background: #2b2b2b;
+  -webkit-box-shadow: 2px 2px 10px -5px #c5c5c5;
+          box-shadow: 2px 2px 10px -5px #c5c5c5;
+}
+
+.main .cars ul li:hover {
+  -webkit-box-shadow: 2px 3px 10px -5px #c5c5c5;
+          box-shadow: 2px 3px 10px -5px #c5c5c5;
+}
+
+.main .cars ul li h3 {
+  margin: 0;
+}
+
+.main .cars ul li button {
+  padding: 3px 6px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 8px;
+  background: #f86262;
+  color: whitesmoke;
+  border: none;
+}
+
+.main .add-car {
+  border-right: 1px solid black;
+  height: 100%;
+  padding: 1.2rem;
+  margin-bottom: 0;
+  background: #2e2e2e;
+}
+
+.main .add-car h3 {
+  text-align: center;
+}
+
+.main .add-car form {
+  font-size: 18px;
+}
+
+.main .add-car form .form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: top;
+      -ms-flex-pack: top;
+          justify-content: top;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+}
+
+@media screen and (max-width: 680px) {
+  .main .add-car form .form-container {
+    display: -ms-grid;
+    display: grid;
+    gap: 10px;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    place-items: center;
+  }
+}
+
+.main .add-car form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .add-car form div input {
+  display: inline-block;
+  width: 120px;
+  padding: 3px 6px;
+  border-radius: 7px;
+  background: #202020;
+  border: 1px solid whitesmoke;
+  color: whitesmoke;
+  font-size: 16px;
+}
+
+.main .add-car form div input + label {
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 680px) {
+  .main .add-car form div input + label {
+    margin-top: .5rem;
+  }
+}
+
+.main .add-car form .button-container {
+  margin-top: 0;
+  text-align: center;
+}
+
+.main .add-car form .button-container button {
+  margin-top: 1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 8px;
+  padding: 4px 8px;
+  background: #50a1ff;
+  color: whitesmoke;
+  font-size: 18px;
+}
+/*# sourceMappingURL=App.css.map */

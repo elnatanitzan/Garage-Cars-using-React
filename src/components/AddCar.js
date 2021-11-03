@@ -10,13 +10,6 @@ class AddCar extends Component {
             model: null }
     }
     handleChange = (e) => {
-        /*
-        if (e.target.id == "brand")
-            this.setState({
-                brand: e.target.value})
-        else
-                // x4
-        */
         const really_new_car = {...this.state.new_car}
         really_new_car[e.target.id] = e.target.value
         this.setState({
@@ -27,9 +20,8 @@ class AddCar extends Component {
     }
     handleSubmit = (e) => {
         e.preventDefault();
-        //this.props.addCar({ model: this.state.model, brand: this.state.brand ...})
         this.props.addCar(this.state.new_car)
-        console.log(this.state.new_car)
+        e.target.reset();
     }
     render() {   
         return (
@@ -38,23 +30,23 @@ class AddCar extends Component {
                 <form  onSubmit={this.handleSubmit}>
                     <div className="form-container">
                         <div>
-                            <label htmlFor="brand">Brand:</label>
-                            <input type="text" id="brand" onChange={this.handleChange} required />
+                            <input type="text" id="brand" onChange={this.handleChange} required placeholder="Brand:"/>
+                            <label htmlFor="brand"></label>
                         </div>
 
                         <div>
-                            <label htmlFor="Model">Model:</label>
-                            <input type="text" id="model" onChange={this.handleChange} />
+                            <input type="text" id="model" onChange={this.handleChange} placeholder="Model:"/>
+                            <label htmlFor="Model"></label>
                         </div>
 
                         <div>
-                            <label htmlFor="Color">Color:</label>
-                            <input type="text" id="color" onChange={this.handleChange} />
+                            <input type="text" id="color" onChange={this.handleChange} placeholder="Color:"/>
+                            <label htmlFor="Color"></label>
                         </div>
 
                         <div>
-                            <label htmlFor="Year">Year:</label>
-                            <input type="number" id="year" onChange={this.handleChange} />
+                            <input type="number" id="year" onChange={this.handleChange} placeholder="Year:"/>
+                            <label htmlFor="Year"></label>
                         </div>
                     </div>
                     <div className="button-container">
