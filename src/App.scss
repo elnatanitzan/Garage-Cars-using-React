@@ -14,7 +14,6 @@ body {
   font-family: "Nunito", sans-serif;
 }
 
-
 .app-header {
   height: 80px;
   background: #2e2e2e;
@@ -72,6 +71,10 @@ body {
         background: #2b2b2b;
         box-shadow: 2px 2px 10px -5px #c5c5c5;
         
+        &:hover {
+          box-shadow: 2px 3px 10px -5px #c5c5c5;
+        }
+        
         h3 {
           margin: 0;
         }
@@ -84,11 +87,9 @@ body {
           color: whitesmoke;
           border: none;
         }
-        
       }
     }
   }
-  
   
   .add-car {
     border-right: 1px solid rgb(0, 0, 0);
@@ -128,24 +129,23 @@ body {
         input {
           display: inline-block;
           width: 120px;
-          // margin-top: .5rem;
           padding: 3px 6px;
           border-radius: 7px;
           background: #202020;
           border: 1px solid whitesmoke;
           color: whitesmoke;
           font-size: 16px;
-          
         }
-      
-        label {
-         width: fit-content;
-         padding: 20px 0 10px 0;
+        input+label {
+          margin-top: 2rem;
+          @media screen and (max-width: 680px) {
+            margin-top: .5rem;
+          }
         }
       }
 
       .button-container {
-        margin-top: 2rem;
+        margin-top: 0;
         text-align: center;
         
         button {
@@ -160,6 +160,5 @@ body {
         }
       }
     }
-  
-}
+  }
 }
